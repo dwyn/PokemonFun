@@ -1,0 +1,61 @@
+ <div class="row" style="margin-top: 10px;"> </div>
+  <div style="  display: block; margin-right: auto; margin-left: auto; width: 50%" >
+    <h4 class="center"> Create New Pokemon! </h4><br>
+
+    <%= form_for @pokemon do |f| %>
+      <div class="form-group">
+        <%= f.label :image %> 
+        <%= f.file_field :image %>
+      </div> <br>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: "Pokemon Name", class: "form-control" %>
+      </div><br>
+
+      <div class="form-group">
+        <%= f.label :type %>
+        <%= f.text_field :pkmn_type, placeholder: "Type", class: "form-control" %>
+      </div><br>
+
+      <div class="form-group">
+        <%= f.label :level %>
+        <%= f.text_field :level, placeholder: "Level", class: "form-control" %>
+      </div><br>
+
+      <div class="form-group">
+        <%= f.label :attack %>
+        <%= f.text_field :attack, placeholder: "Attack", class: "form-control" %>
+      </div><br>
+
+      <div class="form-group">
+        <%= f.label :defense %>
+        <%= f.text_field :defense, placeholder: "Defense", class: "form-control" %>
+      </div><br>
+      
+      <div class="form-group">
+        <%= f.label :speed %>
+        <%= f.text_field :speed, placeholder: "Speed", class: "form-control" %>
+      </div><br>
+
+      <div class="form-group">
+        <%= f.label :pokedex %>
+        <%= f.text_field :pokedex, placeholder: "Pokedex", class: "form-control" %>
+      </div><br>
+
+      <div class="form-group">
+        <%= f.label :special_attack %>
+        <%= f.text_field :sp_attack, placeholder: "Special Attack", class: "form-control" %>
+      </div><br>
+
+      <div class="form-group">
+        <%= f.label :defense %>
+        <%= f.text_field :sp_defense, placeholder: "Special Defense", class: "form-control" %>
+      </div><br>
+      
+      <br>
+
+      <button type="submit" class="btn btn-md btn-primary btn-block">Create Pokemon!</button>
+    <% end %>
+  </h3>
+</div>

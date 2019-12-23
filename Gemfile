@@ -5,13 +5,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-# gem 'rubocop-rails', require: false
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'slug'
 gem 'devise'
 gem 'cancancan'# Pundit
 gem 'simple_form'
-gem 'rspec-rails'
+gem 'poke-api-v2'
+gem 'activerecord-reset-pk-sequence' #https://github.com/splendeo/activerecord-reset-pk-sequence
+gem 'material-sass'
+gem 'material_icons'
 # <-- Added Gems End  -->
 
 
@@ -30,9 +32,15 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'rspec-rails'
+  gem 'simplecov'
+  gem 'capybara'
 end
 
 group :development do
+  gem 'pry-rails'
+  gem "better_errors"
+  gem "binding_of_caller"
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'

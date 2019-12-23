@@ -1,3 +1,6 @@
+check out https://pokedex.org/#/pokemon/2
+https://freehand.invisionapp.com/freehand/document/IYAxwcw9q
+
 Strongly consider your MVP, but track stretch goals
 Mimimum Viable Product --> SHOULD AT LEAST BE YOUR PROJECT REQUIREMENTS
 A minimum viable product (MVP) is a product with just enough features to satisfy early customers and provide feedback for future product development.
@@ -65,10 +68,19 @@ potentials:
 
 ## Modeling Our Data
 User?
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
 
 #### Trainer
 name string
-buddy_pokemon?
 badges
 
 team_id
@@ -87,7 +99,7 @@ speed int
 trainer_id
 user_id int
 
-#### Team
+#### Team (Are static --> Only three teams [Valor Instinct Mystic])
 name
 
 #### Item
@@ -128,3 +140,10 @@ Admin view? How do you handle that?
 ## Readme
 Try to keep your readme updated 
 https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+
+
+
+1. Implement Bootstrap
+2. Give the user a way to sign in
+3. Maybe style the pokemon index (but not really)
+4. Obvi cancancancancancancancancancancancancancancancancan
