@@ -12,8 +12,9 @@ gem 'cancancan'# Pundit
 gem 'simple_form'
 gem 'poke-api-v2'
 gem 'activerecord-reset-pk-sequence' #https://github.com/splendeo/activerecord-reset-pk-sequence
-gem 'material-sass'
-gem 'material_icons'
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 # <-- Added Gems End  -->
 
 

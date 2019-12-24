@@ -13,13 +13,13 @@
     <div> defense: <%= pokemon.defense %> </div>
     <div> Speed: <%= pokemon.speed %> </div>
     
-    <%# if can? :update, pokemon %>
+    <% if can? :update, pokemon %>
       <%= link_to "Edit Pokemon", edit_pokemon_path(pokemon), class: "btn btn-primary" %>
-    <%# end %>
+    <% end %>
 
-    <%# if can? :destroy, pokemon %>
+    <% if can? :destroy, pokemon %>
     <%= link_to "Delete Pokemon", pokemon_path(pokemon), method: "delete", class: "btn btn-primary" %>
-    <%# end %>
+    <% end %>
   </div>
 </div>
    <br><br>

@@ -1,9 +1,8 @@
 class PokemonsController < ApplicationController
-  load_and_authorize_resource
   
-  # def index
-  #   @pokemon = Pokemon.all
-  # end
+  def index
+    @pokemon = Pokemon.all
+  end
 
   def update
     if @pokemon.update_attributes(pokemon_params)
@@ -14,6 +13,10 @@ class PokemonsController < ApplicationController
     end
   end
 
+  # def edit
+  #   pokemon = Pokemon.find_by_slug
+  #   authorize
+  # end
   
   def create
     @pokemon = Pokemon.new(pokemon_params)
