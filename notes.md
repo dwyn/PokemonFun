@@ -143,4 +143,5 @@ https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
 
 
-testing
+For handling Slug + CanCanCan
+https://github.com/CanCanCommunity/cancancan/wiki/FriendlyId-support
