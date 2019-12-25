@@ -143,7 +143,4 @@ https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
 
 
-1. Implement Bootstrap
-2. Give the user a way to sign in
-3. Maybe style the pokemon index (but not really)
-4. Obvi cancancancancancancancancancancancancancancancancan
+testing
