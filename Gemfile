@@ -6,7 +6,6 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-gem 'slug'
 gem 'devise'
 gem 'cancancan'# Pundit
 gem 'simple_form'
@@ -15,6 +14,7 @@ gem 'activerecord-reset-pk-sequence' #https://github.com/splendeo/activerecord-r
 gem 'omniauth-google-oauth2'
 gem 'omniauth'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'slug'
 # <-- Added Gems End  -->
 
 

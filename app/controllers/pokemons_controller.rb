@@ -1,5 +1,7 @@
 class PokemonsController < ApplicationController
+  # load_and_authorize_resource find_by: :slug
   load_and_authorize_resource :find_by => :slug
+
   def index
     @pokemon = Pokemon.all
   end
@@ -13,10 +15,10 @@ class PokemonsController < ApplicationController
     end
   end
 
-  # def edit
-  #   pokemon = Pokemon.find_by_slug
-  #   authorize
-  # end
+  def edit
+    @pokemon = Pokemon.find_by_slug(params[:slug])
+    authorize! :edit, @pokemon
+  end
   
   def create
     @pokemon = Pokemon.new(pokemon_params)
@@ -37,6 +39,7 @@ class PokemonsController < ApplicationController
   end
 
   def destroy
+    authorize! :destroy, @pokemon
     if @pokemon.destroy
       flash[:success] = 'Congrats, you destroyed a pokemon😔'
     else
