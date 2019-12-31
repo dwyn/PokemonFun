@@ -3,7 +3,7 @@ class PokemonsController < ApplicationController
   load_and_authorize_resource :find_by => :slug
 
   def index
-    @pokemon = Pokemon.all
+    @pokemon = Pokemon.paginate(page: params[:page])
   end
 
   def update

@@ -90,6 +90,7 @@ poke_list = PokeApi.get(pokemon: {limit: 500})
 poke_list.results.each  do |pkmn|
   Pokemon.create!(
     name: pkmn.name,
+    # image: io: File.open('/path/to/file'), filename: 'file.pdf')
     pkmn_type: PokeApi.get(pokemon: pkmn.name).types[0].type.name,
     pokedex: Pokemon.count == 0 ? 1 : Pokemon.last.pokedex + 1,
     level: Faker::Number.between(from: 1, to: 1000),

@@ -1,30 +1,31 @@
 
 
 <div class="row">
-<% @pokemon.each do |pokemon| %>
+  <% @pokemon.each do |pokemon| %>
 
-<div class="card col-md-4" style="width: 18rem; margin-bottom: 1rem; margin-right: 1rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><%= pokemon.name %></h5>
+    <div class="card col-md-auto" style="width: 18rem; margin-bottom: .5rem; margin-right: .5rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= pokemon.name %></h5>
 
-    <div> Type: <%= pokemon.pkmn_type %> </div>
-    <div> Level: <%= pokemon.level %> </div>
-    <div> Attack: <%= pokemon.attack %> </div>
-    <div> defense: <%= pokemon.defense %> </div>
-    <div> Speed: <%= pokemon.speed %> </div>
-    
-    <% if can? :update, pokemon %>
-      <%= link_to "Edit", edit_pokemon_path(pokemon), class: "btn btn-warning" %>
-    <% end %>
+        <div> Type: <%= pokemon.pkmn_type %> </div>
+        <div> Level: <%= pokemon.level %> </div>
+        <div> Attack: <%= pokemon.attack %> </div>
+        <div> defense: <%= pokemon.defense %> </div>
+        <div> Speed: <%= pokemon.speed %> </div>
+        
+        <% if can? :update, pokemon %>
+          <%= link_to "Edit", edit_pokemon_path(pokemon), class: "btn btn-warning" %>
+        <% end %>
 
-    <% if can? :destroy, pokemon %>
-    <%= link_to "Delete", pokemon_path(pokemon), method: "delete", class: "btn btn-danger" %>
-    <% end %>
-  </div>
+        <% if can? :destroy, pokemon %>
+        <%= link_to "Delete", pokemon_path(pokemon), method: "delete", class: "btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+
+  <% end %>
+
 </div>
-   <br><br>
-<% end %>
 
-</div>
-  
+<%= will_paginate @pokemon %>

@@ -15,6 +15,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'slug'
+gem 'will_paginate', '~> 3.1.0'
 # <-- Added Gems End  -->
 
 
