@@ -1,8 +1,9 @@
-<h1>Pokemon#index</h1>
-<p>Find me in app/views/pokemon/index.html.erb</p>
 
+
+<div class="row">
 <% @pokemon.each do |pokemon| %>
-<div class="card" style="width: 18rem;">
+
+<div class="card col-md-4" style="width: 18rem; margin-bottom: 1rem; margin-right: 1rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><%= pokemon.name %></h5>
@@ -14,14 +15,16 @@
     <div> Speed: <%= pokemon.speed %> </div>
     
     <% if can? :update, pokemon %>
-      <%= link_to "Edit Pokemon", edit_pokemon_path(pokemon), class: "btn btn-primary" %>
+      <%= link_to "Edit", edit_pokemon_path(pokemon), class: "btn btn-warning" %>
     <% end %>
 
     <% if can? :destroy, pokemon %>
-    <%= link_to "Delete Pokemon", pokemon_path(pokemon), method: "delete", class: "btn btn-primary" %>
+    <%= link_to "Delete", pokemon_path(pokemon), method: "delete", class: "btn btn-danger" %>
     <% end %>
   </div>
 </div>
    <br><br>
 <% end %>
+
+</div>
   
