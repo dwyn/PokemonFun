@@ -16,6 +16,8 @@ gem 'omniauth'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'slug'
 gem 'will_paginate', '~> 3.1.0'
+gem "mini_magick"
+gem 'image_processing'
 # <-- Added Gems End  -->
 
 

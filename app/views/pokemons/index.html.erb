@@ -4,7 +4,7 @@
   <% @pokemon.each do |pokemon| %>
 
     <div class="card col-md-auto" style="width: 18rem; margin-bottom: .5rem; margin-right: .5rem;">
-      <img src="..." class="card-img-top" alt="...">
+      <%= image_tag pokemon.image.variant(resize_to_limit: [100, 100]).processed %>
       <div class="card-body">
         <h5 class="card-title"><%= pokemon.name %></h5>
 

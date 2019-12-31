@@ -86,11 +86,10 @@ Trainer.create!(
 
 p "#{Trainer.count} trainer created!"
 
-poke_list = PokeApi.get(pokemon: {limit: 500})
+poke_list = PokeApi.get(pokemon: {limit: 200})
 poke_list.results.each  do |pkmn|
-  Pokemon.create!(
+  temp_pokemon = Pokemon.create!(
     name: pkmn.name,
-    # image: io: File.open('/path/to/file'), filename: 'file.pdf')
     pkmn_type: PokeApi.get(pokemon: pkmn.name).types[0].type.name,
     pokedex: Pokemon.count == 0 ? 1 : Pokemon.last.pokedex + 1,
     level: Faker::Number.between(from: 1, to: 1000),
@@ -102,6 +101,8 @@ poke_list.results.each  do |pkmn|
     trainer_id: Trainer.first.id,
     user_id: Faker::Number.between(from: User.first.id, to: User.last.id)
   )
+  temp_pokemon.image.attach(io: File.open('./public/pkmndflt.png'), filename: 'pkmndflt.png')
+  temp_pokemon.image.analyze
 end
 
 p "#{Pokemon.count} pokemon created!"
