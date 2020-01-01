@@ -1,1 +1,1 @@
-<span style="text-align: center;"> okhi </span>
+<span style="margin: auto;"> okhi </span>
