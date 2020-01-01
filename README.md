@@ -1,1 +1,1 @@
-<span style="margin: auto;"> okhi </span>
+<div style="margin: auto;"> okhi </div>
